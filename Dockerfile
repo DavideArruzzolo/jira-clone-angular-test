@@ -11,7 +11,7 @@ COPY . .
 
 # Build the project for production. 
 # NOTE: Check the package.json of your chosen project. The command might just be `npm run build`
-RUN npm run build --configuration=production 
+RUN ng build
 
 # Stage 2: Serve the application with Nginx
 FROM nginx:alpine
