@@ -21,7 +21,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the built output from Stage 1 to Nginx
 # IMPORTANT: Change 'project-name' to the actual output folder name found in angular.json
-COPY --from=build /app/dist/project-name /usr/share/nginx/html
+COPY --from=build /app/dist/browser /usr/share/nginx/html
 
 # Copy the custom Nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
